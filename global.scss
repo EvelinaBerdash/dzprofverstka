@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 1920px;
+    font-family: 'Lato';
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+$mainColor: #f16d7f;
+$DarkColor: #222222;
+$DarkColorFooter: #222224;
+$whiteColor: #ffffff;
+$logoWhiteColor: #e8e8e8;
+$textWhiteColor: #f8f8f8;
+$textGreyColor:#6f6e6e;
+
+@mixin text($weight, $size: 14px, $height: 17px) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin text2024($weight, $size2024: 20px, $height2024: 24px) {
+    font-weight: $weight;
+    font-size: $size2024;
+    line-height: $height2024;
+}
+
+//?
+
+
+
+
+.header-color {
+    background: $DarkColor;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    .header {
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+
+        .header-wrp-btn {
+            display: flex;
+            align-items: center;
+            align-self: center;
+
+
+            .header-logo {
+                margin-right: 41px;
+            }
+
+            .header-search-form {
+                display: flex;
+
+                .header-search-btn {
+                    display: none;
+                    @include text(300);
+                    color: $textWhiteColor;
+                    background-color: transparent;
+                    border: 1px solid $textWhiteColor;
+                }
+
+                .header-search-btn:hover {
+                    display: block;
+                }
+            }
+
+            .menu {
+                width: 32px;
+                height: 23px;
+
+                .menu-switch {
+                    display: none;
+                }
+
+                .menu_container {
+                    visibility: hidden;
+                    position: fixed;
+                    display: flex;
+                    width: 232px;
+                    height: 764px;
+                    top: 75px;
+                    right: 0;
+                    background: $whiteColor;
+                    overflow: hidden;
+                    opacity: 1;
+                    z-index: 4;
+
+                    .menu-list {
+                        list-style-type: none;
+                        text-decoration: none;
+                        padding: 37px 0 0 34px;
+
+                        .menu-list-title {
+                            display: block;
+                            padding-bottom: 24px;
+                        }
+
+                        .menu-list-item {
+                            @include text(400);
+
+                            .menu-list-item-link {
+                                text-decoration: none;
+                                color: $mainColor;
+                            }
+
+                            .menu-sublist {
+                                list-style-type: none;
+
+                                .menu-sublist-item {
+                                    padding: 11px 0 0 21.5px;
+
+                                    .menu-sublist-item-link {
+                                        text-decoration: none;
+                                        color: $textGreyColor;
+                                    }
+
+                                }
+
+                                .menu-sublist-item:last-child {
+                                    padding-bottom: 20px;
+                                }
+
+                                .menu-sublist-item:first-child {
+                                    padding-top: 12px;
+                                }
+
+                            }
+
+                        }
+                    }
+                }
+
+                .menu-btn {
+                    display: flex;
+                    padding: 0;
+                    margin: 0;
+                    width: 32px;
+                    height: 23px;
+                    border: none;
+                    background-color: transparent;
+                }
+
+                .menu-btn-item {
+                    margin: auto;
+                    display: block;
+                    width: 100%;
+                    height: 3px;
+                    background-color: #fff;
+                    position: relative;
+                }
+
+                .menu-btn-item::before,
+                .menu-btn-item::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 3px;
+                    background-color: #fff;
+                    position: absolute;
+                    left: 0;
+                }
+
+                .menu-btn-item::before {
+                    top: -10px;
+                }
+
+                .menu-btn-item::after {
+                    top: 10px;
+                }
+
+                .menu-btn:hover .menu-btn-item,
+                .menu-btn:hover .menu-btn-item::before,
+                .menu-btn:hover .menu-btn-item::after {
+                    background-color: orange;
+                }
+
+                .menu-btn:active .menu-btn-item,
+                .menu-btn:active .menu-btn-item::before,
+                .menu-btn:active .menu-btn-item::after {
+                    background-color: red;
+                }
+
+                .menu-switch:checked~.menu_container {
+                    visibility: visible;
+                }
+
+            }
+
+            .account-btn {
+                margin-left: 25px;
+                margin-right: 33px;
+            }
+
+            .svg-color {
+                fill: $logoWhiteColor;
+            }
+
+            .svg-color:hover {
+                fill: orange;
+            }
+
+            .svg-color:active {
+                fill: red;
+            }
+        }
+    }
+}
+
+.page-footer {
+
+    .subscribe-bgi {
+        background-image: url(img/footer-bgphoto.png);
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .subscribe {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            z-index: 4;
+
+            .subscribe-info {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                flex-direction: column;
+                height: 448px;
+
+                .subscribe-info-txt {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-align: center;
+                    color: $DarkColorFooter;
+                    width: 360px;
+                    max-height: 99px;
+                    margin: 30px 0 0 0;
+                }
+            }
+
+            .subscribe-form-wrp {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                flex-direction: column;
+                height: 448px;
+
+                .subscribe-form-title {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 29px;
+                    text-align: center;
+                    color: $DarkColorFooter;
+                }
+
+                .subscribe-form-subtitle {
+                    padding-top: -9px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 21.6px;
+                    text-align: center;
+                    color: $DarkColorFooter;
+                }
+
+                .subscribe-form {
+                    margin: 32px 0 0 0;
+                    border-radius: 25px;
+                    height: 49px;
+                    width: 356px;
+                    display: flex;
+
+                    .subscribe-form-email {
+                        width: 256px;
+                        background: #E1E1E1;
+                        border: 1px solid #E1E1E1;
+                        border-radius: 25px 0 0 25px;
+                        padding: 0 0 0 22px;
+                        box-sizing: border-box;
+                        @include text(400);
+                        display: flex;
+                        align-items: center;
+                        color: $DarkColorFooter;
+                        opacity: 0.67;
+                    }
+
+                    .subscribe-form-btn {
+                        width: 100px;
+                        background: $mainColor;
+                        border: 1px solid $mainColor;
+                        border-radius: 0 25px 25px 0;
+                        @include text(400);
+                        align-items: center;
+                        text-align: center;
+                        color: $whiteColor;
+                    }
+
+                    .subscribe-form-btn:hover {
+                        background: $whiteColor;
+                        color: $mainColor;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .subscribe-bgi:after {
+        content: '';
+        position: absolute;
+        background-color: rgba(244, 244, 244, 0.7);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+    }
+
+    .copyright-and-icons-color {
+        background: $DarkColorFooter;
+
+
+
+        .copyright-and-icons {
+            display: flex;
+            justify-content: space-between;
+            height: 79px;
+
+            .page-footer-txt {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #FBFBFB;
+                align-self: center;
+            }
+
+            .icon-box {
+                display: flex;
+                align-self: center;
+
+                .icon-item {
+                    height: 32px;
+                    width: 32px;
+                    margin-right: 8px;
+                    background: $whiteColor;
+                    display: flex;
+                    justify-content: center;
+
+                    .page-footer-socials-item {
+                        align-self: center;
+                    }
+                }
+
+                .icon-item:last-child {
+                    margin-right: 0;
+                }
+
+                .icon-item:hover {
+                    background: $mainColor;
+
+                    .icon-item-svg {
+                        fill: $whiteColor;
+                    }
+                }
+
+            }
+        }
+    }
+}
