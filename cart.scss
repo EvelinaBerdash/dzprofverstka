@@ -9,9 +9,7 @@
     }
 
     .title-cart-txt {
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 29px;
+        @include text2429(400);
         color: $mainColor;
         align-self: center;
     }
@@ -31,11 +29,11 @@
 
             .shopping_cart_box {
 
-
                 .shopping_cart {
                     display: flex;
                     margin-bottom: 30px;
                     box-shadow: 10px 10px 10px #e5e5e5;
+                    transition: all 1s ease;
 
                     .shopping_cart-info-close {
                         width: 390px;
@@ -50,9 +48,7 @@
                         word-wrap: break-word;
 
                         .shopping_cart-title {
-                            font-weight: 400;
-                            font-size: 24px;
-                            line-height: 29px;
+                            @include text2429(400);
                             color: $DarkColor;
                             margin-bottom: 42px;
                         }
@@ -94,6 +90,7 @@
 
                 .shopping_cart:hover {
                     box-shadow: 10px 10px 10px $mainColor;
+                    transform: rotate(360deg);
                 }
 
                 .shopping_cart:last-child {
@@ -109,12 +106,13 @@
                 .cart-button {
                     width: 234px;
                     height: 49px;
+                    transition: all 1s ease;
 
                     .cart-button-txt {
                         height: 100%;
                         width: 100%;
                         @include text(300);
-                        color: #000000;
+                        color: $totalBlack;
                         background-color: transparent;
                         border: 1px solid #A4A4A4;
                     }
@@ -171,6 +169,7 @@
                     height: 34px;
                     width: 100px;
                     border: 1px solid #A4A4A4;
+                    transition: all 1s ease;
                 }
 
                 .adress-button-txt:hover {
@@ -236,6 +235,7 @@
                         height: 50px;
                         width: 273px;
                         border: 1px solid $mainColor;
+                        transition: all 1s ease;
                     }
 
                     .check-out-button-txt:hover {

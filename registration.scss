@@ -7,9 +7,7 @@
     }
 
     .title-registration-txt {
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 29px;
+        @include text2429(400);
         color: $mainColor;
         align-self: center;
     }
@@ -36,7 +34,7 @@
             height: 45px;
             margin-bottom: 20.5px;
             @include text1316(300);
-            color: #000000;
+            color: $totalBlack;
             padding-left: 16.73px;
         }
 
@@ -66,7 +64,7 @@
             font-weight: 300;
             font-size: 11px;
             line-height: 13px;
-            color: #000000;
+            color: $totalBlack;
         }
 
         .data-to-fill-txt {
@@ -106,27 +104,21 @@
         width: 652px;
 
         .loyalty-info-title {
-            font-weight: 300;
-            font-size: 24px;
-            line-height: 29px;
-            color: #000000;
+            @include text2429(300);
+            color: $totalBlack;
         }
 
         .loyalty-info-subtitle {
             margin-top: 22px;
-            font-weight: 300;
-            font-size: 24px;
-            line-height: 29px;
-            color: #000000;
+            @include text2429(300);
+            color: $totalBlack;
         }
 
         .loyalty-info-list {
 
             .loyalty-info-txt {
-                font-weight: 300;
-                font-size: 24px;
-                line-height: 29px;
-                color: #000000;
+                @include text2429(300);
+                color: $totalBlack;
                 margin-bottom: 16px;
                 list-style-type: none;
 
