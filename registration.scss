@@ -1,0 +1,143 @@
+.title-registration_color {
+    background: #F8F3F4;
+
+    .title-registration {
+        height: 148px;
+        display: flex;
+    }
+
+    .title-registration-txt {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: $mainColor;
+        align-self: center;
+    }
+}
+
+.registration-description {
+    display: flex;
+    padding: 64px 0 96px 0;
+    justify-content: space-between;
+
+    .data-to-fill {
+        display: flex;
+        flex-direction: column;
+        width: 359px;
+
+        .data-to-fill-title {
+            @include text1619(300);
+            color: $DarkColor;
+            margin-bottom: 20.5px;
+        }
+
+        .data-to-fill-input {
+            width: 360px;
+            height: 45px;
+            margin-bottom: 20.5px;
+            @include text1316(300);
+            color: #000000;
+            padding-left: 16.73px;
+        }
+
+        .data-to-fill-input::placeholder {
+            @include text1316(300);
+            color: #B1B1B1;
+        }
+
+        .data-to-fill-input:focus {
+            outline: 2px solid $mainColor;
+            border: 1px solid $mainColor;
+        }
+
+        .data-to-fill-input:nth-child(3) {
+            margin-bottom: 0;
+        }
+
+        .data-to-fill-input:nth-child(8) {
+            margin-bottom: 0;
+        }
+
+        .gender-radio {
+            margin: 31.5px 0 33px 0;
+        }
+
+        .gender-radio-box label {
+            font-weight: 300;
+            font-size: 11px;
+            line-height: 13px;
+            color: #000000;
+        }
+
+        .data-to-fill-txt {
+            @include text1316(300);
+            color: #B1B1B1;
+            margin: 15px 0 39px 0;
+        }
+
+        .data-to-fill-btn-txt {
+            height: 50px;
+            width: 167px;
+            background: $mainColor;
+            border: 1px solid $mainColor;
+            @include text(400);
+            color: $whiteColor;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            box-sizing: border-box;
+
+            .data-to-fill-btn-svg {
+                fill: $whiteColor;
+            }
+        }
+
+        .data-to-fill-btn-txt:hover {
+            color: $mainColor;
+            background: $whiteColor;
+
+            .data-to-fill-btn-svg {
+                fill: $mainColor;
+            }
+        }
+    }
+
+    .loyalty-info {
+        width: 652px;
+
+        .loyalty-info-title {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+        }
+
+        .loyalty-info-subtitle {
+            margin-top: 22px;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+        }
+
+        .loyalty-info-list {
+
+            .loyalty-info-txt {
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 29px;
+                color: #000000;
+                margin-bottom: 16px;
+                list-style-type: none;
+
+                .loyalty-info-svg {
+                    padding-right: 23.08px;
+                }
+            }
+
+            .loyalty-info-txt:first-child {
+                margin-top: 27px;
+            }
+        }
+    }
+}

@@ -1,0 +1,196 @@
+@import 'global.scss';
+
+.main-product-image-bgcolor {
+    background: #F7F7F7;
+    max-height: 777px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .main-product-image {
+        margin: 11px 0 41.5px 0;
+        text-align: center;
+        height: 724px;
+        width: 597px;
+        z-index: 3;
+        position: relative;
+    }
+
+    .product-arrows {
+        padding: 12.65px 17.3px;
+        background: rgba(42, 42, 42, 0.15);
+        fill: #000000;
+    }
+
+    .product-arrows:hover {
+        fill: $mainColor;
+    }
+}
+
+.product-specification {
+    height: 601px;
+    text-align: center;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    text-align: -webkit-center;
+    padding: 65px 0;
+    z-index: 4;
+    background: $whiteColor;
+    position: relative;
+    margin: -64.54px auto 129.41px auto;
+
+    .product-description {
+        max-width: 555px;
+        text-align: center;
+
+        .product-description-title {
+            @include text(300);
+            color: $mainColor;
+        }
+
+        .product-description-subtitle {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+            color: #4D4D4D;
+            margin: 27.23px 0 48.41px 0;
+        }
+
+        .product-description-txt {
+            @include text(300);
+            color: #5E5E5E;
+        }
+
+        .product-description-price {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #EF5B70;
+            margin-top: 32.27px;
+            padding-bottom: 65.04px;
+            border-bottom: 1px solid #EBEBEB;
+        }
+
+    }
+
+    .product-specification-list {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 65.05px 0 49px 0;
+
+        .product-specification-list-item {
+            @include text(400);
+            color: $textGreyColor;
+            padding-right: 23px;
+
+            .product-specification-list-svg {
+                fill: $textGreyColor;
+                padding-left: 9px;
+            }
+        }
+
+        .product-specification-list-item:hover {
+            color: #EF5B70;
+
+            .product-specification-list-svg {
+                fill: #EF5B70;
+            }
+        }
+    }
+
+    .product-specification-button {
+
+        .product-specification-btn {
+            height: 47.4px;
+            width: 211px;
+            box-sizing: border-box;
+        }
+
+        .product-specifications-item-btn-txt {
+            @include text1619(400);
+            color: #F26376;
+            text-decoration: none;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 1px solid #FF6A6A;
+            background: transparent;
+
+            .product-specifications-item-svg {
+                fill: #F26376;
+            }
+        }
+
+        .product-specifications-item-btn-txt:hover {
+            background: #F26376;
+            color: #E5E5E5;
+
+            .product-specifications-item-svg {
+                fill: #E5E5E5;
+            }
+        }
+
+
+
+
+    }
+}
+
+.products_text {
+    margin-top: 96px;
+    margin-bottom: 48px;
+    text-align: center;
+
+    .products-title {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        color: $DarkColor;
+        padding-bottom: 6px;
+    }
+
+    .products-txt {
+        @include text(400);
+        color: #9F9F9F;
+    }
+}
+
+.center_products-btn {
+    text-align: center;
+
+    .products-btn {
+        border: 1px solid #FF6A6A;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 48.5px;
+        background-color: transparent;
+        height: 48px;
+        width: 211px
+    }
+
+    .products-btn-link {
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .products-btn:hover {
+        background: $mainColor;
+
+        .products-btn-title {
+            color: $whiteColor;
+        }
+    }
+
+    .products-btn-title {
+        @include text1619(400);
+        color: #F26376;
+    }
+}
