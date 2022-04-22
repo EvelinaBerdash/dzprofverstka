@@ -57,7 +57,7 @@
         }
 
         .gender-radio {
-            margin: 31.5px 0 33px 0;
+            margin: 31.5px auto 33px auto;
         }
 
         .gender-radio-box label {
@@ -65,6 +65,7 @@
             font-size: 11px;
             line-height: 13px;
             color: $totalBlack;
+            margin: 0 20px 0 10px;
         }
 
         .data-to-fill-txt {
