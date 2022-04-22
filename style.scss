@@ -6,32 +6,32 @@
 @import 'catalog.scss';
 
 .main {
-    .header-banner_color {
+    .banner_color {
         background: #F1E4E6;
         min-height: 764px;
-        background-image: url(img/index_top.png);
-        background-size: 800px 764px;
-        background-repeat: no-repeat;
-        background-position: 13%;
+        width: 100%;
         transition: all 2s ease;
 
-        .header-banner {
+        .banner {
             display: flex;
-            justify-content: space-around;
+            justify-content: flex-end;
+            background-image: url(img/index_top.png);
+            align-items: center;
+            background-repeat: no-repeat;
+            min-height: inherit;
+            background-size: contain;
+            background-position: bottom left -225px;
 
-            .header-banner_photo {
-                width: 51%;
-            }
-
-            .header-banner-wrp {
-                display: flex;
-                flex-direction: column;
+            .banner-wrp {
+                display: block;
                 position: relative;
-                padding-left: 91.42px;
                 flex-grow: 1;
-                margin-top: 290px;
+                width: 100%;
+                max-width: 377px;
+                margin: 0 95px 87px 0;
 
-                .header-banner-title {
+
+                .banner-title {
                     font-weight: 900;
                     font-size: 48px;
                     line-height: 58px;
@@ -39,7 +39,7 @@
                     text-transform: uppercase;
                 }
 
-                .header-banner-subtitle {
+                .banner-subtitle {
                     font-weight: 700;
                     font-size: 32px;
                     line-height: 37px;
@@ -47,11 +47,11 @@
                     display: block;
                 }
 
-                .header-banner-wrp-decor {
+                .banner-wrp-decor {
                     position: relative;
                 }
 
-                .header-banner-wrp-decor::before {
+                .banner-wrp-decor::before {
                     content: "";
                     width: 12px;
                     left: -32px;
@@ -65,7 +65,7 @@
         }
     }
 
-    .header-banner_color:hover {
+    .banner:hover {
         transform: rotate(360deg);
     }
 
@@ -171,45 +171,30 @@
             }
         }
 
-        .center_products-btn {
+        .products-btn {
+            border: 1px solid #FF6A6A;
+            text-decoration: none;
+            display: block;
+            margin: 48.5px auto auto;
+            background-color: transparent;
+            height: 48px;
+            max-width: 211px;
+            width: 100%;
+            transition: all 1s ease;
             text-align: center;
-
-            .products-btn {
-                border: 1px solid #FF6A6A;
-                text-decoration: none;
-                display: inline-block;
-                margin-top: 48.5px;
-                background-color: transparent;
-                height: 48px;
-                width: 211px;
-                transition: all 1s ease;
-            }
-
-            .products-btn:hover {
-                transform: scale(1.2);
-            }
-
-            .products-btn-link {
-                text-decoration: none;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-            }
-
-            .products-btn:hover {
-                background: $mainColor;
-
-                .products-btn-title {
-                    color: $whiteColor;
-                }
-            }
 
             .products-btn-title {
                 @include text1619(400);
                 color: #F26376;
+            }
+        }
+
+        .products-btn:hover {
+            transform: scale(1.2);
+            background: $mainColor;
+
+            .products-btn-title {
+                color: $whiteColor;
             }
         }
     }

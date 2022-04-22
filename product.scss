@@ -1,5 +1,3 @@
-@import 'global.scss';
-
 .main-product-image-bgcolor {
     background: #F7F7F7;
     max-height: 777px;
@@ -99,23 +97,21 @@
 
     .product-specification-button {
 
-        .product-specification-btn {
+
+
+        .product-specifications-item-btn-txt {
             height: 47.4px;
             width: 211px;
             box-sizing: border-box;
-        }
-
-        .product-specifications-item-btn-txt {
             @include text1619(400);
             color: #F26376;
             text-decoration: none;
-            height: 100%;
-            width: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: space-between;
             border: 1px solid #FF6A6A;
             background: transparent;
+            padding: 0 56.5px 0 23.5px;
 
             .product-specifications-item-svg {
                 fill: #F26376;
@@ -130,10 +126,6 @@
                 fill: #E5E5E5;
             }
         }
-
-
-
-
     }
 }
 
@@ -153,42 +145,5 @@
     .products-txt {
         @include text(400);
         color: #9F9F9F;
-    }
-}
-
-.center_products-btn {
-    text-align: center;
-
-    .products-btn {
-        border: 1px solid #FF6A6A;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 48.5px;
-        background-color: transparent;
-        height: 48px;
-        width: 211px
-    }
-
-    .products-btn-link {
-        text-decoration: none;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .products-btn:hover {
-        background: $mainColor;
-
-        .products-btn-title {
-            color: $whiteColor;
-        }
-    }
-
-    .products-btn-title {
-        @include text1619(400);
-        color: #F26376;
     }
 }
