@@ -29,19 +29,19 @@ $textGreyColor:#6f6e6e;
 @mixin text1619($weight, $size1619: 16px, $height1619: 19px) {
     font-weight: $weight;
     font-size: $size1619;
-    line-height: $size1619;
+    line-height: $height1619;
 }
 
 @mixin text1316($weight, $size1316: 13px, $height1316: 16px) {
     font-weight: $weight;
     font-size: $size1316;
-    line-height: $size1316;
+    line-height: $height1316;
 }
 
 @mixin text2429($weight, $size2429: 24px, $height2429: 29px) {
     font-weight: $weight;
     font-size: $size2429;
-    line-height: $size2429;
+    line-height: $height2429;
 }
 
 
@@ -209,7 +209,7 @@ $textGreyColor:#6f6e6e;
 
             .account-btn {
                 margin-left: 25px;
-                margin-right: 33px;
+                margin-right: 41px;
             }
 
             .cart-btn-link {
@@ -258,7 +258,6 @@ $textGreyColor:#6f6e6e;
     .new-arrivals-color {
         background: #F8F3F4;
 
-
         .new-arrivals {
             height: 148px;
             text-align: center;
@@ -288,6 +287,7 @@ $textGreyColor:#6f6e6e;
 
                     .new-arrivals-way-txt span {
                         color: $mainColor;
+                        font-weight: 700;
                     }
 
                     .new-arrivals-way-txt:hover {
@@ -364,12 +364,9 @@ $textGreyColor:#6f6e6e;
 
                 .products-item-button {
                     display: block;
-
-
                 }
             }
         }
-
 
         .product_card:nth-child(-n+3) {
             margin-top: 0;
@@ -409,6 +406,7 @@ $textGreyColor:#6f6e6e;
             text-align: center;
             display: flex;
             justify-content: space-between;
+            box-sizing: border-box;
 
             .features-item {
                 max-width: 360px;
@@ -447,6 +445,7 @@ $textGreyColor:#6f6e6e;
             display: flex;
             justify-content: space-between;
             z-index: 4;
+            box-sizing: border-box;
 
             .subscribe-info {
                 display: flex;
@@ -483,7 +482,7 @@ $textGreyColor:#6f6e6e;
                 }
 
                 .subscribe-form-subtitle {
-                    padding-top: -9px;
+                    margin-top: 9px;
                     font-weight: 400;
                     font-size: 18px;
                     line-height: 21.6px;
@@ -548,12 +547,11 @@ $textGreyColor:#6f6e6e;
     .copyright-and-icons-color {
         background: $DarkColorFooter;
 
-
-
         .copyright-and-icons {
             display: flex;
             justify-content: space-between;
             height: 79px;
+            padding: 0 32px;
 
             .footer-txt {
                 @include text1619(400);
@@ -602,4 +600,84 @@ $textGreyColor:#6f6e6e;
 
 .italic {
     font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 32px;
+    }
+
+    .main {
+        .product_card_box {
+            padding: 0 16px;
+
+            .product_card {
+                margin-top: 16px;
+                margin-right: 16px;
+                width: 351px;
+
+                .product-card-hover img {
+                    width: 351px;
+                }
+            }
+
+            .product_card:nth-child(2n) {
+                margin-right: 0;
+            }
+
+            .product_card:nth-child(-n+3) {
+                margin-top: 16px;
+            }
+        }
+
+        .features-color {
+            .features-box {
+                flex-direction: column;
+                padding-bottom: 64px;
+                height: 610px;
+
+
+                .features-item {
+                    padding-top: 48px;
+
+                    .features-item-title {
+                        padding: 22.07px 0 16px 0;
+                    }
+                }
+            }
+        }
+
+        .new-arrivals-color {
+
+            .new-arrivals {
+                padding: 0 16px;
+            }
+        }
+    }
+
+    .footer {
+
+        .subscribe-bgi {
+            background-position: -375px top;
+
+            .subscribe {
+                flex-direction: column;
+                height: 614px;
+                padding: 54px 0 140px 0;
+
+
+                .subscribe-info {
+                    height: 100%;
+                }
+
+                .subscribe-form-wrp {
+                    margin-top: 60px;
+
+                    .subscribe-form {
+                        margin-top: 27px;
+                    }
+                }
+            }
+        }
+    }
 }

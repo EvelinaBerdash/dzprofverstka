@@ -22,7 +22,8 @@
         justify-content: space-between;
 
         .items-cart {
-            width: 652px;
+            max-width: 652px;
+            width: 100%;
             box-sizing: border-box;
 
             .shopping_cart_box {
@@ -31,10 +32,11 @@
                     display: flex;
                     margin-bottom: 30px;
                     box-shadow: 10px 10px 10px #e5e5e5;
-                    transition: all 1s ease;
+                    transition: all 3s ease;
 
                     .shopping_cart-info-close {
-                        width: 390px;
+                        max-width: 390px;
+                        width: 100%;
                         display: flex;
                         justify-content: space-between;
                     }
@@ -123,121 +125,195 @@
         }
 
         .adress {
-            width: 360px;
+            max-width: 360px;
+            width: 100%;
 
             .adress-title {
                 @include text1619(300);
                 color: $DarkColor;
+                margin-bottom: 20.5px;
             }
 
-            .adress-input {
-                width: 360px;
-                height: 45px;
-                box-sizing: border-box;
-                border: 1px solid #A4A4A4;
-                margin-top: 20.5px;
-                @include text1316(300);
-                color: $DarkColor;
-                padding-left: 17px;
-            }
-
-            .adress-input:focus {
-                outline: 2px solid $mainColor;
-                border: 1px solid $mainColor;
-            }
-
-            .adress-input::placeholder {
-                color: #B1B1B1;
-            }
-
-            .adress-button {
-                margin: 24px 0 57.5px 0;
-
-                .adress-button-txt {
-                    font-weight: 300;
-                    font-size: 11px;
-                    line-height: 13px;
-                    color: #4A4A4A;
-                    background: transparent;
-                    height: 34px;
-                    width: 100px;
-                    border: 1px solid #A4A4A4;
-                    transition: all 1s ease;
-                }
-
-                .adress-button-txt:hover {
-                    background: $mainColor;
-                    color: #E5E5E5;
-                    border: 1px solid $mainColor;
-                }
-            }
-
-            .check-out {
-                background: #F5F3F3;
-                padding: 39px 34px 42px 44px;
-
-                .total {
-                    border-bottom: 1px solid #E2E2E2;
-                    width: 275px;
-                }
-
-                .sub-total {
-                    display: flex;
-                    justify-content: flex-end;
-                    margin-right: -8px;
-
-                    .sub-total-txt {
-                        font-weight: 400;
-                        font-size: 11px;
-                        line-height: 13px;
-                        color: #4A4A4A;
-                        padding-bottom: 12px;
-                    }
-
-                    .sub-total-txt:first-child {
-                        margin-right: 22px;
-                    }
-                }
-
-                .grand-total {
-                    display: flex;
-                    justify-content: flex-end;
-                    margin: 0 -5px 21px 0;
-
-                    .grand-total-txt {
-                        @include text1619(300);
+            .adress_container {
+                .adress-box {
+                    .adress-input {
+                        max-width: 360px;
+                        width: 100%;
+                        height: 45px;
+                        box-sizing: border-box;
+                        border: 1px solid #A4A4A4;
+                        margin-bottom: 20.5px;
+                        @include text1316(300);
                         color: $DarkColor;
+                        padding-left: 17px;
                     }
 
-                    .grand-total-txt-color {
-                        color: $mainColor;
+                    .adress-input:last-child {
+                        margin-bottom: 24px;
                     }
 
-                    .grand-total-txt:first-child {
-                        margin-right: 25px;
+                    .adress-input:focus {
+                        outline: 2px solid $mainColor;
+                        border: 1px solid $mainColor;
+                    }
+
+                    .adress-input::placeholder {
+                        color: #B1B1B1;
+                    }
+
+                    .adress-button {
+                        margin-bottom: 57.5px;
+
+                        .adress-button-txt {
+                            font-weight: 300;
+                            font-size: 11px;
+                            line-height: 13px;
+                            color: #4A4A4A;
+                            background: transparent;
+                            height: 34px;
+                            width: 100px;
+                            border: 1px solid #A4A4A4;
+                            transition: all 1s ease;
+                        }
+
+                        .adress-button-txt:hover {
+                            background: $mainColor;
+                            color: #E5E5E5;
+                            border: 1px solid $mainColor;
+                        }
                     }
                 }
 
-                .check-out-button {
-                    padding-top: 17px;
+                .check-out {
+                    background: #F5F3F3;
+                    padding: 39px 34px 42px 44px;
+                    box-sizing: border-box;
 
-                    .check-out-button-txt {
-                        @include text1619(300);
-                        color: $whiteColor;
-                        background: $mainColor;
-                        height: 50px;
-                        width: 273px;
-                        border: 1px solid $mainColor;
-                        transition: all 1s ease;
+                    .total {
+                        border-bottom: 1px solid #E2E2E2;
+                        max-width: 275px;
+                        width: 100%;
                     }
 
-                    .check-out-button-txt:hover {
-                        background: transparent;
-                        color: $mainColor;
+                    .sub-total {
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-right: -8px;
+
+                        .sub-total-txt {
+                            font-weight: 400;
+                            font-size: 11px;
+                            line-height: 13px;
+                            color: #4A4A4A;
+                            padding-bottom: 12px;
+                        }
+
+                        .sub-total-txt:first-child {
+                            margin-right: 22px;
+                        }
+                    }
+
+                    .grand-total {
+                        display: flex;
+                        justify-content: flex-end;
+                        margin: 0 -5px 21px 0;
+
+                        .grand-total-txt {
+                            @include text1619(300);
+                            color: $DarkColor;
+                        }
+
+                        .grand-total-txt-color {
+                            color: $mainColor;
+                        }
+
+                        .grand-total-txt:first-child {
+                            margin-right: 25px;
+                        }
+                    }
+
+                    .check-out-button {
+                        padding-top: 17px;
+
+                        .check-out-button-txt {
+                            @include text1619(300);
+                            color: $whiteColor;
+                            background: $mainColor;
+                            height: 50px;
+                            max-width: 273px;
+                            width: 100%;
+                            border: 1px solid $mainColor;
+                            transition: all 1s ease;
+                        }
+
+                        .check-out-button-txt:hover {
+                            background: transparent;
+                            color: $mainColor;
+                        }
                     }
                 }
             }
         }
     }
 
+}
+
+@media (max-width: 768px) {
+    .title-cart_color {
+        .title-cart {
+            padding-left: 16px;
+        }
+    }
+
+    .shopping-basket-color {
+        padding: 59px 18px 128px 16px;
+
+        .shopping-basket {
+            flex-direction: column;
+
+            .items-cart {
+                max-width: 717px;
+
+                .shopping_cart_box {
+                    .shopping_cart {
+                        .shopping_cart-info-close {
+                            max-width: 472px;
+                        }
+                    }
+                }
+
+                .items-cart-buttons {
+                    justify-content: space-evenly;
+                    margin: 62px 0 64px 0;
+                }
+
+            }
+
+            .adress {
+                max-width: 751px;
+
+                .adress_container {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .adress-box {
+                        .adress-input {
+                            max-width: 350px;
+                        }
+
+                        .adress-button {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .check-out {
+                        padding: 39px 29px 42px 39px;
+                        max-width: 351px;
+                        width: 100%;
+                        max-height: 214px;
+                    }
+                }
+            }
+        }
+    }
 }

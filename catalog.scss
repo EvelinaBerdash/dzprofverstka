@@ -1,106 +1,3 @@
-.products_filter-wrp {
-    // padding-top: 39px;
-    position: absolute;
-    left: 0;
-
-
-    .catalog-filter-filter {
-
-        .filter-details {
-            width: 360px;
-            position: relative;
-            z-index: 4;
-            background: $whiteColor;
-
-            .filter-btn {
-                list-style-type: none;
-                @include text(600);
-                color: $totalBlack;
-                text-transform: uppercase;
-                cursor: pointer;
-                padding: 13px 16px;
-
-                .filter-btn-svg {
-                    margin-left: 10px;
-                    fill: $totalBlack;
-                }
-            }
-
-            .filter-btn:hover {
-                color: #EF5B70;
-
-                .filter-btn-svg {
-                    fill: #EF5B70;
-                }
-
-            }
-
-            .filter-body {
-
-                height: 100%;
-                //position: absolute;
-                z-index: 4;
-                padding: 0 16px 0;
-                width: 100%;
-                box-sizing: border-box;
-
-
-                .filter-body-list {
-                    height: 100%;
-                    list-style-type: none;
-                    @include text(400);
-                    color: $textGreyColor;
-                    text-transform: uppercase;
-                    border-bottom: 1px solid #ebebeb;
-                    border-left: 5px solid #EF5B70;
-                    padding: 10px 11px;
-                    margin-bottom: 18px;
-                    cursor: pointer;
-                }
-
-                .filter-body-list:hover {
-                    color: #EF5B70;
-                }
-
-                .filter-body-list:first-child {
-                    margin-top: 3px;
-                }
-
-                .filter-body-item {
-                    list-style-type: none;
-                    @include text(400);
-                    padding: 0 0 11px 18px;
-                }
-
-                .filter-body-item a {
-                    text-decoration: none;
-                    color: $textGreyColor;
-                }
-
-                .filter-body-item:last-child {
-                    padding-bottom: 24px;
-                }
-
-                .filter-body-item:first-child {
-                    margin-top: 24px;
-                }
-
-                .filter-body-item a:hover {
-                    color: #EF5B70;
-                }
-            }
-
-            .filter-body details {
-                width: 100%;
-            }
-        }
-
-        .filter-details:hover {
-            box-shadow: 6px 4px 35px #dddd;
-        }
-    }
-}
-
 .products_filter {
     display: flex;
     margin-top: 39px;
@@ -241,6 +138,109 @@
             }
         }
     }
+
+    .products_filter-wrp {
+        // padding-top: 39px;
+        position: absolute;
+        left: 0;
+
+
+        .catalog-filter-filter {
+
+            .filter-details {
+                width: 360px;
+                position: relative;
+                z-index: 4;
+                background: $whiteColor;
+
+                .filter-btn {
+                    list-style-type: none;
+                    @include text(600);
+                    color: $totalBlack;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    padding: 13px 16px;
+
+                    .filter-btn-svg {
+                        margin-left: 10px;
+                        fill: $totalBlack;
+                    }
+                }
+
+                .filter-btn:hover {
+                    color: #EF5B70;
+
+                    .filter-btn-svg {
+                        fill: #EF5B70;
+                    }
+
+                }
+
+                .filter-body {
+
+                    height: 100%;
+                    //position: absolute;
+                    z-index: 4;
+                    padding: 0 16px 0;
+                    width: 100%;
+                    box-sizing: border-box;
+
+
+                    .filter-body-list {
+                        height: 100%;
+                        list-style-type: none;
+                        @include text(400);
+                        color: $textGreyColor;
+                        text-transform: uppercase;
+                        border-bottom: 1px solid #ebebeb;
+                        border-left: 5px solid #EF5B70;
+                        padding: 10px 11px;
+                        margin-bottom: 18px;
+                        cursor: pointer;
+                    }
+
+                    .filter-body-list:hover {
+                        color: #EF5B70;
+                    }
+
+                    .filter-body-list:first-child {
+                        margin-top: 3px;
+                    }
+
+                    .filter-body-item {
+                        list-style-type: none;
+                        @include text(400);
+                        padding: 0 0 11px 18px;
+                    }
+
+                    .filter-body-item a {
+                        text-decoration: none;
+                        color: $textGreyColor;
+                    }
+
+                    .filter-body-item:last-child {
+                        padding-bottom: 24px;
+                    }
+
+                    .filter-body-item:first-child {
+                        margin-top: 24px;
+                    }
+
+                    .filter-body-item a:hover {
+                        color: #EF5B70;
+                    }
+                }
+
+                .filter-body details {
+                    width: 100%;
+                }
+            }
+
+            .filter-details:hover {
+                box-shadow: 6px 4px 35px #dddd;
+            }
+        }
+    }
 }
 
 .pagination {
@@ -297,4 +297,31 @@
         color: $mainColor;
     }
 
+}
+
+@media (max-width: 768px) {
+    .products_filter {
+        margin-top: 11px;
+        margin-bottom: 11px;
+        justify-content: space-between;
+        padding-right: 16px;
+
+        .products_filter-wrp {
+            position: relative;
+        }
+
+        .select-list {
+            .select-list-item {
+                padding-left: 28px;
+
+                .list-size {
+                    width: 60px;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        margin-top: 40.5px;
+    }
 }
