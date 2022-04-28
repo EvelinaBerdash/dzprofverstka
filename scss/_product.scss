@@ -39,10 +39,22 @@
     .product-description {
         max-width: 555px;
         text-align: center;
+        position: relative;
 
         .product-description-title {
             @include text(300);
             color: $mainColor;
+        }
+
+        .product-description-title::before {
+            content: "";
+            width: 63px;
+            top: 29px;
+            bottom: 12.1px;
+            position: absolute;
+            background: $mainColor;
+            height: 3px;
+            left: 44.5%;
         }
 
         .product-description-subtitle {

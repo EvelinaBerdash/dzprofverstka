@@ -314,7 +314,8 @@ $textGreyColor:#6f6e6e;
         justify-content: space-between;
 
         .product_card {
-            width: 360px;
+            max-width: 360px;
+            width: 100%;
             background: $textWhiteColor;
             margin-top: 30px;
 
@@ -614,10 +615,11 @@ $textGreyColor:#6f6e6e;
             .product_card {
                 margin-top: 16px;
                 margin-right: 16px;
-                width: 351px;
+                max-width: 351px;
 
                 .product-card-hover img {
-                    width: 351px;
+                    max-width: 351px;
+                    width: 100%;
                 }
             }
 

@@ -1,8 +1,8 @@
-@import 'global';
-@import 'common';
-@import 'cart';
-@import 'product';
-@import 'catalog';
+@import 'scss/global';
+@import 'scss/common';
+@import 'scss/cart';
+@import 'scss/product';
+@import 'scss/catalog';
 
 .main {
     .banner_color {
@@ -89,7 +89,8 @@
             padding-top: 65px;
 
             .card_categories {
-                width: 360px;
+                width: 100%;
+                max-width: 360px;
                 height: 260px;
                 display: flex;
                 align-items: center;
@@ -98,6 +99,7 @@
                 flex-direction: column;
                 position: relative;
                 transition: all 1s ease;
+                margin-bottom: 30px;
             }
 
             .card_categories:nth-child(1) {
@@ -114,9 +116,10 @@
 
             .card_categories:last-child {
                 background-image: url(img/sccesories.png);
+                max-width: 1140px;
                 width: 100%;
                 height: 180px;
-                margin-top: 30px;
+                margin-bottom: 0;
             }
 
             .card_categories:hover {
@@ -374,14 +377,14 @@
                 padding: 20px 16px 0 16px;
 
                 .card_categories {
-                    width: 227px;
+                    max-width: 227px;
                     height: 167.6px;
-                    margin-right: 19px;
+                    margin: 0 19px 20px 0;
                     background-size: 100%;
                 }
 
                 .card_categories:last-child {
-                    margin: 20px 0 0 0;
+                    margin: 0;
                     height: 116px;
                 }
 
